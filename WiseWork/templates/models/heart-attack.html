@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+
+{% block content%}
+<div class="container" style="padding : 10px">
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="number" class="form-control" id="Age" name="Age" placeholder="Enter Age" required>
+        </div>
+        <div class="form-group">
+            <label for="Sex">Sex</label>
+            <input type="number" class="form-control" id="Sex" name="Sex" placeholder="Enter Sex" required>
+            <p>Enter 0 for male 1 for female</p>
+        </div>
+        <div class="form-group">
+            <label for="Cp">Chest Pain</label>
+            <input type="number" class="form-control" id="Cp" name="Cp" placeholder="Enter Chest Pain" required>
+            <p>Enter 1 2 3 where 1 -> lowest and 3 -> highest </p>
+        </div>
+        <div class="form-group">
+            <label for="trtbps">Resting Blood Pressure (in mm Hg)</label>
+            <input type="number" class="form-control" id="trtbps" placeholder="Enter Resting Blood Pressure" required>
+        </div>
+        <div class="form-group">
+            <label for="Chol">cholestoral (mg/dl)</label>
+            <input type="number" class="form-control" id="Chol" name="Chol" placeholder="Enter Cholestoral" required>
+        </div>
+        <div class="form-group">
+            <label for="Fbs">Fasting Blood Sugar</label>
+            <input type="number" class="form-control" id="Fbs" name="Fbs" placeholder="Enter Fasting Blood Sugar"
+                required>
+            <p>fasting blood sugar > 120 mg/dl => 1 = true; 0 = false</p>
+        </div>
+        <div class="form-group">
+            <label for="Rest">Resting Electrocardiographic Results</label>
+            <input type="number" class="form-control" id="Rest" name="Rest"
+                placeholder="Enter resting electrocardiographic results" required>
+        </div>
+        <div class="form-group">
+            <label for="thala">Maximum Heart Rate Achieved</label>
+            <input type="number" class="form-control" id="thala" name="thala"
+                placeholder="Enter Maximum Heart Rate Achieved" required>
+        </div>
+        <div class="form-group">
+            <label for="Exec">Exercise Induced Angina </label>
+            <input type="number" class="form-control" id="Exec" name="Exec" placeholder="Enter Exercise Induced Angina"
+                required>
+            <p>(1 = yes; 0 = no)</p>
+        </div>
+        <div class="form-group">
+            <label for="Old">Old Peak</label>
+            <input type="number" class="form-control" id="Old" name="Old" placeholder="Enter Old peak" required>
+        </div>
+        <div class="form-group">
+            <label for="Slp">slp</label>
+            <input type="number" class="form-control" id="Slp" name="Slp" placeholder="Enter Slp" required>
+        </div>
+        <div class="form-group">
+            <label for="Caa">caa</label>
+            <input type="number" class="form-control" id="Caa" name="Caa" placeholder="Enter Caa" required>
+        </div>
+        <div class="form-group">
+            <label for="Thall">thall</label>
+            <input type="number" class="form-control" id="Thall" name="Thall" placeholder="Enter Thall" required>
+        </div>
+
+        <button class="btn primary btn-dark">Predict</button>
+    </form>
+</div>
+{% endblock content%}

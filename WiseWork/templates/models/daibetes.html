@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block content%}
+<div class="container" style="padding : 10px">
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="ploy">Polydipsia</label>
+            <input type="number" class="form-control" id="ploy" name="poly" placeholder="Enter Polydipsia" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Sudden weight Loss</label>
+            <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter Sudden weight Loss"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="pp">Partial Paresis</label>
+            <input type="number" class="form-control" id="pp" name="pp" placeholder="Enter Partial Paresis" required>
+        </div>
+        <div class="form-group">
+            <label for="iri">irritability</label>
+            <input type="number" class="form-control" id="iri" name="iri" placeholder="Enter Polyphagia" required>
+        </div>
+        <div class="form-group">
+            <label for="ph">Polyphagia</label>
+            <input type="number" class="form-control" id="ph" name="ph" placeholder="Enter Age" required>
+        </div>
+        <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="number" class="form-control" id="Age" name="Age" placeholder="Enter Age" required>
+        </div>
+        <div class="form-group">
+            <label for="vb">Visual blurring</label>
+            <input type="number" class="form-control" id="vb" name="vb" placeholder="Enter Visual blurring" required>
+        </div>
+
+        <button class="btn primary btn-dark">Predict</button>
+    </form>
+</div>
+{% endblock content%}
